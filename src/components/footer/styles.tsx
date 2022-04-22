@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Box = styled.div`
   padding: 30px;
   background:${({theme})=> theme.colors.grey};
-  position: absolute;
   bottom: 0;
   height: 165px;
   width: 100%;
