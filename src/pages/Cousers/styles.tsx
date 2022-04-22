@@ -12,16 +12,6 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
 `
-export const CardContainer = styled.div`
-    float: left;
-    padding: .25rem;
-    min-height: 1px;
-    box-sizing: border-box;
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-`
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
@@ -30,9 +20,3 @@ export const Col = styled.div`
     display: flex;
     flex-direction: column;
 `
-export const Grid = styled.div`
-  display: grid
-  grid-template-columns: repeat(4, 1fr);
-  //grid-template-rows: 100px 100px
-  grid-gap: 5px
-`;
