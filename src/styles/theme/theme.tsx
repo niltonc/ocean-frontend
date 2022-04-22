@@ -17,9 +17,10 @@ export default {
       title: '30.68px',
       button: '17.25px',
       titlecard: '20px',
-      h1: '11.35px',
+      h1: '15px',
       h2: '11.4px',
-      h3: '9.17px',
-      h4: '7.3px',
+      h3: '11.35px',
+      h4: '9.17px',
+      h5: '7.3px',
     },
   };
