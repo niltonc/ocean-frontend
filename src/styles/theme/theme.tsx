@@ -9,6 +9,7 @@ export default {
       blue:'#004098',
       greylight:'#F8F8F8',
       grey:'#ECECEC',
+      white:'#FFFFFF'
     },
     
     fonts:{
