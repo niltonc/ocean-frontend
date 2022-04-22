@@ -5,7 +5,7 @@ export const Box = styled.div`
   background:${({theme})=> theme.colors.grey};
   position: absolute;
   bottom: 0;
-  height: 170px;
+  height: 165px;
   width: 100%;
 `;
 
@@ -27,5 +27,5 @@ export const Container = styled.div`
 `
 export const Copyright = styled(Container)`
     color: #A3A3A3;
-    margin-top: 25px;
+    margin-top: 18px;
 `
