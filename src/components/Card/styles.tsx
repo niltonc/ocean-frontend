@@ -30,7 +30,6 @@ export const Title = styled.p`
     left: 10px;
 `
 export const Information = styled.div`
-    //background-color: #1221;
     position: absolute;
     width: 250px;
     height: 170px;
@@ -47,11 +46,15 @@ export const Row = styled.div`
 export const Col = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content:center;
+    width: 100px;
 `
 export const H3 = styled.p`
     color: ${({theme}) => theme.colors.black};
     font-size: ${({theme}) => theme.fonts.h3};
     position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 export const H1 = styled(H3)`
     font-size: ${({theme}) => theme.fonts.h1};

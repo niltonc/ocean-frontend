@@ -55,7 +55,7 @@ function Card (){
                 <C.Row>
                 <IconUser/>
                 <C.Col>
-                <C.H3>PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO</C.H3>
+                <C.H3>PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO000000</C.H3>
                 </C.Col>
 
                 <IconLocation/>
