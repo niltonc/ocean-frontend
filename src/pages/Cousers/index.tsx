@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../../components/Card';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
-import { Container, CardContainer,Title, Row, Col } from './styles';
+import { Container, CardContainer,Title, Row, Col, Grid } from './styles';
 // do component card
 import * as C from '../../components/Card/styles';
 import IconArrowDwon from '../../assets/arrowdown';
@@ -30,7 +30,6 @@ const CousersPage: React.FunctionComponent<ICousersPageProps> = (props) => {
             <Container>
            <CardContainer>
            {arrayCoursers.map((courser) => (
-            //  components card
             <C.Container>
             <C.Color>
             <C.SvgDiv>
@@ -111,10 +110,8 @@ const CousersPage: React.FunctionComponent<ICousersPageProps> = (props) => {
             </C.Button>
         </C.Color>
         </C.Container>
-            // 
            ))}
-           </CardContainer>
-        
+      </CardContainer>
             </Container>
             <Footer/>
         </div>
