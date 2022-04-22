@@ -10,7 +10,6 @@ export const Box = styled.div`
 `;
 
 export const Svg = styled.div`
-  //position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
