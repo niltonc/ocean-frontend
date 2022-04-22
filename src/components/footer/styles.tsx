@@ -6,6 +6,7 @@ export const Box = styled.div`
   bottom: 0;
   height: 165px;
   width: 100%;
+  margin-top: 30px;
 `;
 
 export const Svg = styled.div`

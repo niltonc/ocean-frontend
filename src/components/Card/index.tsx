@@ -24,8 +24,6 @@ function Card (){
             </C.SvgDiv>
             
             <C.Title>
-                {/* WebServices com Retrofit e
-                Imagens Glide */}
                 {courser.title}
             </C.Title>
 
@@ -35,7 +33,6 @@ function Card (){
                 <C.Col>
                 <C.H3>INÍCIO EM</C.H3>
                 <C.H1>
-                    {/* 12/01 às 16:00 */}
                     {courser.startTime}
                     </C.H1>
                 
@@ -45,7 +42,6 @@ function Card (){
                 <C.Col>
                 <C.H3>TÉRMINO</C.H3>
                 <C.H1>
-                    {/* 16/01 */}
                      {courser.endDate}
                     </C.H1> 
                 </C.Col>
@@ -67,7 +63,6 @@ function Card (){
                 <IconUser/>
                 <C.Col>
                 <C.H3>
-                    {/* PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO000000 */}
                 {courser.speakers}
 
                 </C.H3>
@@ -76,7 +71,6 @@ function Card (){
                 <IconLocation/>
                 <C.Col>
                 <C.H3>
-                    {/* CAMPOS MANAUS */}
                     {courser.campus}
                 </C.H3> 
                 </C.Col>
@@ -85,14 +79,12 @@ function Card (){
 
             <C.DateTag>
                 <C.TextTag>
-                    {/* INCRIÇÕES ABERTAS A PARTIR DE 11/O1 */}
                     {courser.enrollmentsStart}
                 </C.TextTag>
                 
             </C.DateTag>
 
             <C.Button>
-                {/* {detailsURL} */}
                 Página do Curso
             </C.Button>
         </C.Color>

@@ -12,11 +12,3 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
 `
-export const Row = styled.div`
-    display: flex;
-    flex-direction: row;
-`
-export const Col = styled.div`
-    display: flex;
-    flex-direction: column;
-`
