@@ -1,6 +1,6 @@
 import * as C from './styles'
+import IconArrowDwon from '../../assets/arrowdown';
 import IconArrowUp from '../../assets/arrowup';
-//import IconArrowDown from '../../assets/arrowup';
 import IconBook from '../../assets/book';
 import IconCalendar from '../../assets/calendar';
 import IconDegree from '../../assets/degree';
@@ -15,14 +15,14 @@ function Card (){
     return(
         <C.Container>
             <C.Color>
-
             <C.SvgDiv>
             <IconHeaderCard/>
             </C.SvgDiv>
             
             <C.Title>
-                WebServices com Retrofit e
-                Imagens Glide
+                {/* WebServices com Retrofit e
+                Imagens Glide */}
+                {title}
             </C.Title>
 
             <C.Information>
@@ -30,13 +30,20 @@ function Card (){
                 <IconCalendar/>
                 <C.Col>
                 <C.H3>INÍCIO EM</C.H3>
-                <C.H1>12/01 às 16:00</C.H1>
+                <C.H1>
+                    {/* 12/01 às 16:00 */}
+                    {startTime}
+                    </C.H1>
+                
                 </C.Col>
 
                 <IconCalendar/>
                 <C.Col>
                 <C.H3>TÉRMINO</C.H3>
-                <C.H1>16/01</C.H1>
+                <C.H1>
+                    {/* 16/01 */}
+                     {endDate}
+                    </C.H1> 
                 </C.Col>
                 </C.Row>
 
@@ -55,21 +62,33 @@ function Card (){
                 <C.Row>
                 <IconUser/>
                 <C.Col>
-                <C.H3>PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO000000</C.H3>
+                <C.H3>
+                    {/* PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO000000 */}
+                {speakers}
+
+                </C.H3>
                 </C.Col>
 
                 <IconLocation/>
                 <C.Col>
-                <C.H3>CAMPOS MANAUS</C.H3>
+                <C.H3>
+                    {/* CAMPOS MANAUS */}
+                    {campus}
+                </C.H3> 
                 </C.Col>
                 </C.Row>
             </C.Information>
 
             <C.DateTag>
-                <C.TextTag>INCRIÇÕES ABERTAS A PARTIR DE 11/O1</C.TextTag>
+                <C.TextTag>
+                    {/* INCRIÇÕES ABERTAS A PARTIR DE 11/O1 */}
+                    {enrollmentsStart}
+                </C.TextTag>
+                
             </C.DateTag>
 
             <C.Button>
+                {/* {detailsURL} */}
                 Página do Curso
             </C.Button>
         </C.Color>
