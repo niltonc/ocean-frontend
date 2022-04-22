@@ -9,11 +9,15 @@ import IconHour from '../../assets/hour';
 import IconLocation from '../../assets/location';
 import IconUser from '../../assets/user';
 
+import { arrayCoursers } from '../../pages/Cousers/data';
 
 function Card (){
 
     return(
-        <C.Container>
+        <div>
+            <C.CardContainer>
+        {arrayCoursers.map((courser) => (
+            <C.Container>
             <C.Color>
             <C.SvgDiv>
             <IconHeaderCard/>
@@ -22,7 +26,7 @@ function Card (){
             <C.Title>
                 {/* WebServices com Retrofit e
                 Imagens Glide */}
-                {title}
+                {courser.title}
             </C.Title>
 
             <C.Information>
@@ -32,7 +36,7 @@ function Card (){
                 <C.H3>INÍCIO EM</C.H3>
                 <C.H1>
                     {/* 12/01 às 16:00 */}
-                    {startTime}
+                    {courser.startTime}
                     </C.H1>
                 
                 </C.Col>
@@ -42,7 +46,7 @@ function Card (){
                 <C.H3>TÉRMINO</C.H3>
                 <C.H1>
                     {/* 16/01 */}
-                     {endDate}
+                     {courser.endDate}
                     </C.H1> 
                 </C.Col>
                 </C.Row>
@@ -64,7 +68,7 @@ function Card (){
                 <C.Col>
                 <C.H3>
                     {/* PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO000000 */}
-                {speakers}
+                {courser.speakers}
 
                 </C.H3>
                 </C.Col>
@@ -73,7 +77,7 @@ function Card (){
                 <C.Col>
                 <C.H3>
                     {/* CAMPOS MANAUS */}
-                    {campus}
+                    {courser.campus}
                 </C.H3> 
                 </C.Col>
                 </C.Row>
@@ -82,7 +86,7 @@ function Card (){
             <C.DateTag>
                 <C.TextTag>
                     {/* INCRIÇÕES ABERTAS A PARTIR DE 11/O1 */}
-                    {enrollmentsStart}
+                    {courser.enrollmentsStart}
                 </C.TextTag>
                 
             </C.DateTag>
@@ -93,6 +97,9 @@ function Card (){
             </C.Button>
         </C.Color>
         </C.Container>
+           ))}
+           </C.CardContainer>
+           </div>
     )
 }
 

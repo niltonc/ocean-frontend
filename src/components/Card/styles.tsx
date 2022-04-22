@@ -90,3 +90,13 @@ export const Button = styled.button`
     border-radius:15px;
     font-weight: 500;   
 `
+export const CardContainer = styled.div`
+    float: left;
+    padding: .25rem;
+    min-height: 1px;
+    box-sizing: border-box;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+`
