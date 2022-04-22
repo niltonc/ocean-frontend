@@ -1,28 +1,29 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import Card from '../../components/Card';
+import Footer from '../../components/footer';
 import Header from '../../components/header';
-import * as Text from './styles';
+import { Container, CardContainer,Title, Row, Col } from './styles';
 
 export interface ICousersPageProps {}
 
 const CousersPage: React.FunctionComponent<ICousersPageProps> = (props) => {
     
-    const navigate = useNavigate();
-
-    return (
-                
+    return (     
         <div>
             <Header/>
-            <Text.Text>PAGINA CURSOS</Text.Text>
-            <p>
-                <Link to="/agenda">Go to the About Page!</Link>
-            </p>
-            
-            <p>
-
-                <Link to="/trilhas">Go to the Test Page!</Link>
-            </p>
-            <button onClick={() => navigate('/layout/55')}>Go to layout, with a number</button>
+            <Title>
+                Cursos
+            </Title>
+            <Container>
+           <CardContainer>
+               <Card/>
+               <Card/>
+               <Card/>
+               <Card/>
+           </CardContainer>
+        
+            </Container>
+            <Footer/>
         </div>
     );
 };
