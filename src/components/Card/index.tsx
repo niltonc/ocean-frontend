@@ -1,6 +1,14 @@
 import * as C from './styles'
-import IconHeaderCard from '../../assets/headercard';
+import IconArrowUp from '../../assets/arrowup';
+//import IconArrowDown from '../../assets/arrowup';
+import IconBook from '../../assets/book';
 import IconCalendar from '../../assets/calendar';
+import IconDegree from '../../assets/degree';
+import IconHeaderCard from '../../assets/headercard';
+import IconHour from '../../assets/hour';
+import IconLocation from '../../assets/location';
+import IconUser from '../../assets/user';
+
 
 function Card (){
 
@@ -18,27 +26,43 @@ function Card (){
             </C.Title>
 
             <C.Information>
-                <div style={{backgroundColor:"#1221", display:'flex', flexDirection:"row"}}>
-
-                <div style={{display:"flex", flexDirection:'row'}}>
+                <C.Row>
+                <IconCalendar/>
+                <C.Col>
+                <C.H3>INÍCIO EM</C.H3>
+                <C.H1>12/01 às 16:00</C.H1>
+                </C.Col>
 
                 <IconCalendar/>
-                <div style={{display:"flex", flexDirection:'column'}}>
-                <p>INÍCIO EM</p>
-                <p>12/01 às 16:00</p>
-                </div>
+                <C.Col>
+                <C.H3>TÉRMINO</C.H3>
+                <C.H1>16/01</C.H1>
+                </C.Col>
+                </C.Row>
 
-                </div>
+                <C.Row>
+                <IconBook/>
+                <C.Col>
+                <C.H3>3 AULAS</C.H3>
+                </C.Col>
 
-                <div style={{display:"flex", flexDirection:'row'}}>
-                <IconCalendar/>
-                <div style={{display:"flex", flexDirection:'column'}}>
-                <p>TÉRMINO</p>
-                <p>16/01</p>
-                </div>
+                <IconHour/>
+                <C.Col>
+                <C.H3>12H TOTAL</C.H3>
+                </C.Col>
+                </C.Row>
 
-                </div>
-                </div>
+                <C.Row>
+                <IconUser/>
+                <C.Col>
+                <C.H3>PAULO SALVATORE, MARIA DA BAHIA, E JOAO DO PEDREGULHO</C.H3>
+                </C.Col>
+
+                <IconLocation/>
+                <C.Col>
+                <C.H3>CAMPOS MANAUS</C.H3>
+                </C.Col>
+                </C.Row>
             </C.Information>
 
             <C.DateTag>

@@ -30,20 +30,36 @@ export const Title = styled.p`
     left: 10px;
 `
 export const Information = styled.div`
-    background-color: #1221;
+    //background-color: #1221;
     position: absolute;
-    //display: flex;
-    //flex-direction: row;
     width: 250px;
     height: 170px;
     top: 145px;
     left: 10px;
 `
+export const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+`
+export const Col = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+export const H3 = styled.p`
+    color: ${({theme}) => theme.colors.black};
+    font-size: ${({theme}) => theme.fonts.h3};
+    position: relative;
+`
+export const H1 = styled(H3)`
+    font-size: ${({theme}) => theme.fonts.h1};
+`
 
 export const DateTag = styled.div`
     background-color:${({theme}) => theme.colors.yellow};
     color: ${({theme}) => theme.colors.black};
-    font-size: ${({theme}) => theme.fonts.h2};
     position: absolute;
     border-radius:14px;
     width: 230px;
@@ -52,7 +68,7 @@ export const DateTag = styled.div`
     left: 19px;
 `
 export const TextTag = styled.p`
-    font-size: ${({theme}) => theme.fonts.h3};
+    font-size: ${({theme}) => theme.fonts.h4};
     position: absolute;
     left: 21px;
     top: 8px;
