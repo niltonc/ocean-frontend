@@ -1,22 +1,20 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+import { Title } from '../../pages/Cousers/styles'
 
 export interface ITreadsPageProps {}
 
 const TreadsPage: React.FunctionComponent<ITreadsPageProps> = (props) => {
-    const navigate = useNavigate();
+   
 
     return (
         <div>
-            <p>PAGINA TRILHAS</p>
-            
-            <p>
-                <Link to="/">Go to the About Page!</Link>
-            </p>
-
-            <p>
-                <Link to="/agenda">Go to the Test Page!</Link>
-            </p>
+             <Header/>
+            <Title>
+                Trilhas
+            </Title>
+           <Footer/>
         </div>
     );
 };

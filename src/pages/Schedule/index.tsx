@@ -1,21 +1,20 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+import { Title } from '../../pages/Cousers/styles'
 
 export interface ISchedulePageProps {}
 
 const SchedulePage: React.FunctionComponent<ISchedulePageProps> = (props) => {
-    const navigate = useNavigate();
+    
 
     return (
         <div>
-            <p>PAGINA AGENDA</p>
-            <p>
-                <Link to="/">Go to the About Page!</Link>
-            </p>
-            <p>
-                <Link to="/trilhas">Go to the Test Page!</Link>
-            </p>
-            <button onClick={() => navigate('/layout/55')}>Go to layout, with a number</button>
+            <Header/>
+            <Title>
+                Agenda
+            </Title>
+           <Footer/>
         </div>
     );
 };
