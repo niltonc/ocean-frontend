@@ -16,7 +16,7 @@ export default {
       header:'10.64px',
       title: '30.68px',
       button: '17.25px',
-      titlecard: '15px',
+      titlecard: '20px',
       h1: '11.35px',
       h2: '11.4px',
       h3: '9.17px',
