@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const User = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -15,6 +15,6 @@ const User = (props: SVGProps<SVGSVGElement>) => (
       fill="#00B9FF"
     />
   </svg>
-)
+);
 
-export default User
+export default User;

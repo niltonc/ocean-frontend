@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const Location = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -21,6 +21,6 @@ const Location = (props: SVGProps<SVGSVGElement>) => (
       fill="#00B9FF"
     />
   </svg>
-)
+);
 
-export default Location
+export default Location;

@@ -1,5 +1,5 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from 'react';
+import { SVGProps } from 'react';
 
 const ArrowUp = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -16,6 +16,6 @@ const ArrowUp = (props: SVGProps<SVGSVGElement>) => (
       fill="#464646"
     />
   </svg>
-)
+);
 
-export default ArrowUp
+export default ArrowUp;

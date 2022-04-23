@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const Degree = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -27,6 +27,6 @@ const Degree = (props: SVGProps<SVGSVGElement>) => (
       />
     </defs>
   </svg>
-)
+);
 
-export default Degree
+export default Degree;

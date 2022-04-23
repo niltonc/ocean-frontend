@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const HeaderCard = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -21,6 +21,6 @@ const HeaderCard = (props: SVGProps<SVGSVGElement>) => (
       fill="#464646"
     />
   </svg>
-)
+);
 
-export default HeaderCard
+export default HeaderCard;

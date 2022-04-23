@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const Book = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -21,6 +21,6 @@ const Book = (props: SVGProps<SVGSVGElement>) => (
       fill="#00B9FF"
     />
   </svg>
-)
+);
 
-export default Book
+export default Book;

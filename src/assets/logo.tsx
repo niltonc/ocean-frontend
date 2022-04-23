@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const Logo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -116,6 +116,6 @@ const Logo = (props: SVGProps<SVGSVGElement>) => (
       </filter>
     </defs>
   </svg>
-)
+);
 
-export default Logo
+export default Logo;

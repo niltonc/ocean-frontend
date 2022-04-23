@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const Hour = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -21,6 +21,6 @@ const Hour = (props: SVGProps<SVGSVGElement>) => (
       fill="#00B9FF"
     />
   </svg>
-)
+);
 
-export default Hour
+export default Hour;
