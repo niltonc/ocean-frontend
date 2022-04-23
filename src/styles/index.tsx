@@ -2,13 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
-    * { 
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Helvetica, Sans-Serif;
-    }
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Helvetica, Sans-Serif;
+  }
 
 `;
- 
+
 export default GlobalStyle;
