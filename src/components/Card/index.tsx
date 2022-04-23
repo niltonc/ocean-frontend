@@ -1,98 +1,101 @@
-import * as C from './styles'
-import IconArrowDwon from '../../assets/arrowdown';
-import IconArrowUp from '../../assets/arrowup';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import * as C from './styles';
 import IconBook from '../../assets/book';
 import IconCalendar from '../../assets/calendar';
-import IconDegree from '../../assets/degree';
 import IconHeaderCard from '../../assets/headercard';
 import IconHour from '../../assets/hour';
 import IconLocation from '../../assets/location';
 import IconUser from '../../assets/user';
 
-import { arrayCoursers } from '../../pages/Cousers/data';
+function Card() {
+  const urlAPI = 'https://gist.githubusercontent.com/creathusjobs/3c53322e8dc8c3b524cfb2623c097cc5/raw/adc988f34c4fb1a0fe12035b4b030259776115ea/response.json';
+  const [coursersDB, setCoursersDB] = useState([]);
 
-function Card (){
+  useEffect(() => {
+    axios.get(urlAPI).then((resp) => setCoursersDB(resp.data));
+  }, []);
 
-    return(
-        <div>
-            <C.CardContainer>
-        {arrayCoursers.map((courser) => (
-            <C.Container>
+  return (
+    <div>
+      <C.CardContainer>
+        {coursersDB.map((courser) => (
+          <C.Container key={courser.track}>
             <C.Color>
-            <C.SvgDiv>
-            <IconHeaderCard/>
-            </C.SvgDiv>
-            
-            <C.Title>
+              <C.SvgDiv>
+                <IconHeaderCard />
+              </C.SvgDiv>
+
+              <C.Title>
                 {courser.title}
-            </C.Title>
+              </C.Title>
 
-            <C.Information>
+              <C.Information>
                 <C.Row>
-                <IconCalendar/>
-                <C.Col>
-                <C.H3>INÍCIO EM</C.H3>
-                <C.H1>
-                    {courser.startTime}
+                  <IconCalendar />
+                  <C.Col>
+                    <C.H3>INÍCIO EM</C.H3>
+                    <C.H1>
+                      {courser.startTime}
                     </C.H1>
-                
-                </C.Col>
 
-                <IconCalendar/>
-                <C.Col>
-                <C.H3>TÉRMINO</C.H3>
-                <C.H1>
-                     {courser.endDate}
-                    </C.H1> 
-                </C.Col>
+                  </C.Col>
+
+                  <IconCalendar />
+                  <C.Col>
+                    <C.H3>TÉRMINO</C.H3>
+                    <C.H1>
+                      {courser.endDate}
+                    </C.H1>
+                  </C.Col>
                 </C.Row>
 
                 <C.Row>
-                <IconBook/>
-                <C.Col>
-                <C.H3>3 AULAS</C.H3>
-                </C.Col>
+                  <IconBook />
+                  <C.Col>
+                    <C.H3>3 AULAS</C.H3>
+                  </C.Col>
 
-                <IconHour/>
-                <C.Col>
-                <C.H3>12H TOTAL</C.H3>
-                </C.Col>
+                  <IconHour />
+                  <C.Col>
+                    <C.H3>12H TOTAL</C.H3>
+                  </C.Col>
                 </C.Row>
 
                 <C.Row>
-                <IconUser/>
-                <C.Col>
-                <C.H3>
-                {courser.speakers}
+                  <IconUser />
+                  <C.Col>
+                    <C.H3>
+                      {courser.speakers}
 
-                </C.H3>
-                </C.Col>
+                    </C.H3>
+                  </C.Col>
 
-                <IconLocation/>
-                <C.Col>
-                <C.H3>
-                    {courser.campus}
-                </C.H3> 
-                </C.Col>
+                  <IconLocation />
+                  <C.Col>
+                    <C.H3>
+                      {courser.campus}
+                    </C.H3>
+                  </C.Col>
                 </C.Row>
-            </C.Information>
+              </C.Information>
 
-            <C.DateTag>
+              <C.DateTag>
                 <C.TextTag>
-                    {courser.enrollmentsStart}
+                  {courser.enrollmentsStart}
                 </C.TextTag>
-                
-            </C.DateTag>
 
-            <C.Button>
+              </C.DateTag>
+
+              <C.Button>
                 Página do Curso
-            </C.Button>
-        </C.Color>
-        </C.Container>
-           ))}
-           </C.CardContainer>
-           </div>
-    )
+              </C.Button>
+            </C.Color>
+          </C.Container>
+        ))}
+      </C.CardContainer>
+    </div>
+  );
 }
 
 export default Card;
