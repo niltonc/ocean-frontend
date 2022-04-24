@@ -8,6 +8,7 @@ export const Title = styled.div`
     margin-left: 100px;
     margin-bottom: 30px;
 `;
+
 export const Container = styled.div`
     display: flex;
     justify-content: space-around;
