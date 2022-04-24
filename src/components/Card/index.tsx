@@ -9,7 +9,7 @@ import IconLocation from '../../assets/location';
 import IconUser from '../../assets/user';
 import IconArrowUp from '../../assets/arrowup';
 import IconArrowDown from '../../assets/arrowdown';
-
+import IconDegree from '../../assets/degree.png';
 import setDate from './functions/setDate';
 
 function Card() {
@@ -30,110 +30,76 @@ function Card() {
     setShowMore(!showMore);
   };
 
-  // const setDate = (ISO: Date, Type: String) => {
-  //   const isoConverted = new Date(ISO);
-
-  //   const months = [
-  //     'JANEIRO',
-  //     'FEVEREIRO',
-  //     'MARÇO',
-  //     'ABRIL',
-  //     'MAIO',
-  //     'JUNHO',
-  //     'JULHO',
-  //     'AGOSTO',
-  //     'SETEMBRO',
-  //     'OUTUBRO',
-  //     'NOVEMBRO',
-  //     'DEZEMBRO',
-  //   ];
-  //   const month = isoConverted.getMonth();
-  //   const monthName = months[isoConverted.getMonth()];
-  //   const date = isoConverted.getDate();
-  //   const hour = isoConverted.getHours();
-  //   const min = isoConverted.getMinutes();
-
-  //   if (Type === 'initialCard') {
-  //     return `0${date}/0${month} ás ${hour}:${min}`;
-  //   }
-  //   if (Type === 'finalCard') {
-  //     return `${date}/${month}`;
-  //   }
-  //   if (Type === 'initialAccordion') {
-  //     return `${date} DE ${monthName}`;
-  //   }
-  //   if (Type === 'finalAccordion') {
-  //     return `${hour}:${min}`;
-  //   }
-  // };
-
   return (
     <div>
       <C.Box>
         <C.CardContainer>
-          {coursersDB.slice(0, showMore === false ? 4 : coursersDB.length).map((courser) => (
+          {coursersDB?.slice(0, showMore === false ? 4 : coursersDB.length)?.map((courser) => (
             <C.AccordionWrapper>
-              <C.Container key={courser.track}>
+              <C.Container key={courser?.track}>
                 <C.Color>
                   <C.SvgDiv>
                     <IconHeaderCard />
                   </C.SvgDiv>
 
                   <C.Title>
-                    {courser.title}
+                    {courser?.title}
                   </C.Title>
 
                   <C.Information>
                     <C.Row>
                       <IconCalendar />
-                      <C.Col>
+                      <C.Col1>
                         <C.H3>INÍCIO EM</C.H3>
                         <C.H1>
-                          {setDate(courser.startTime, 'initialCard')}
+                          {setDate(courser?.startTime, 'initialCard')}
                         </C.H1>
-                      </C.Col>
+                      </C.Col1>
 
                       <IconCalendar />
-                      <C.Col>
+                      <C.Col2>
                         <C.H3>TÉRMINO</C.H3>
                         <C.H1>
-                          {setDate(courser.endDate, 'finalCard')}
+                          {setDate(courser?.endDate, 'finalCard')}
                         </C.H1>
-                      </C.Col>
+                      </C.Col2>
                     </C.Row>
 
                     <C.Row>
                       <IconBook />
-                      <C.Col>
-                        <C.H3>3h</C.H3>
-                      </C.Col>
+                      <C.Col1>
+                        <C.H3>3 AULAS</C.H3>
+                      </C.Col1>
 
-                      <IconHour />
-                      <C.Col>
+                      <IconHour color="#00B9FF" />
+                      <C.Col2>
                         <C.H3>12H TOTAL</C.H3>
-                      </C.Col>
+                      </C.Col2>
                     </C.Row>
 
                     <C.Row>
                       <IconUser />
-                      <C.Col>
+                      <C.Col1>
                         <C.H3>
-                          {courser.speakers}
+                          {`${`${courser?.speakers[0]}`?.toUpperCase()}` + ', '
+                          + `${`${courser?.speakers[1]}`?.toUpperCase()}` + ' E '
+                          + `${`${courser?.speakers[2]}`?.toUpperCase()}`}
                         </C.H3>
-                      </C.Col>
+                      </C.Col1>
 
                       <IconLocation />
-                      <C.Col>
+                      <C.Col2>
                         <C.H3>
-                          {courser.campus}
+                          {`${courser?.campus}`?.toUpperCase()}
                         </C.H3>
-                      </C.Col>
+                      </C.Col2>
                     </C.Row>
                   </C.Information>
 
                   <C.DateTag>
                     <C.TextTag>
-                      {courser.enrollmentsStart}
+                      {`INSCRIÇÕES A PARTIR DE ${
+                        `${setDate(courser?.enrollmentsStart, 'finalCard')}`?.toUpperCase()}`}
                     </C.TextTag>
                   </C.DateTag>
 
@@ -143,7 +109,7 @@ function Card() {
                 </C.Color>
               </C.Container>
 
-              {courser.events && (
+              {courser?.events && (
                 (
                 <>
                   <C.RowWrapper>
@@ -163,54 +129,77 @@ function Card() {
 
                   <C.InternalWrapper open={open}>
 
-                    {/* 1 */}
                     <C.RowAccordion>
                       <IconBook />
-                      <C.H3>{setDate(courser.events[0].startTime, 'initialAccordion')}</C.H3>
-                      <C.H3>{`${setDate(courser.events[0].startTime, 'finalAccordion')} - ${setDate(courser.events[0].endTime, 'finalAccordion')}`}</C.H3>
+                      <C.RowText>
+                        <C.H3>{setDate(courser?.events[0]?.startTime, 'initialAccordion')}</C.H3>
+                        <C.H3>
+                          {`${setDate(courser?.events[0]?.startTime, 'finalAccordion')} -
+                      ${setDate(courser?.events[0]?.endTime, 'finalAccordion')}`}
+                        </C.H3>
+                      </C.RowText>
                     </C.RowAccordion>
 
-                    <C.DivAccordion>
-                      <C.TextAccordion>{courser.events[0].title}</C.TextAccordion>
-                      <C.SvgAccordion>
-                        <IconCalendar />
-                      </C.SvgAccordion>
-                      <C.TextAccordion>3h</C.TextAccordion>
-                    </C.DivAccordion>
-                    {/* end 1 */}
+                    <C.RowAccordion2>
+                      <C.TextAccordion1>
+                        {courser?.events[0]?.title}
+                      </C.TextAccordion1>
 
-                    {/* 2 */}
+                      <C.Svg>
+                        <img src={IconDegree} />
+                      </C.Svg>
+
+                      <C.TextAccordion2>
+                        3h
+                      </C.TextAccordion2>
+                    </C.RowAccordion2>
+
                     <C.RowAccordion>
                       <IconBook />
-                      <C.H3>{setDate(courser.events[2].startTime, 'initialAccordion')}</C.H3>
-                      <C.H3>{`${setDate(courser.events[2].startTime, 'finalAccordion')} - ${setDate(courser.events[2].endTime, 'finalAccordion')}`}</C.H3>
+                      <C.RowText>
+                        <C.H3>{setDate(courser?.events[2]?.startTime, 'initialAccordion')}</C.H3>
+                        <C.H3>
+                          {`${setDate(courser?.events[2]?.startTime, 'finalAccordion')} -
+                      ${setDate(courser?.events[2]?.endTime, 'finalAccordion')}`}
+                        </C.H3>
+                      </C.RowText>
                     </C.RowAccordion>
 
-                    <C.DivAccordion>
-                      <C.TextAccordion>{courser.events[2].title}</C.TextAccordion>
-                      <C.SvgAccordion>
-                        <IconHour />
-                      </C.SvgAccordion>
-                      <C.TextAccordion>3h</C.TextAccordion>
-                    </C.DivAccordion>
-                    {/* end 2 */}
+                    <C.RowAccordion2>
+                      <C.TextAccordion1>
+                        {courser?.events[2]?.title}
+                      </C.TextAccordion1>
 
-                    {/* 3 */}
+                      <C.Svg>
+                        <IconHour color="#464646" />
+                      </C.Svg>
+
+                      <C.TextAccordion2>
+                        3h
+                      </C.TextAccordion2>
+                    </C.RowAccordion2>
+
                     <C.RowAccordion>
                       <IconBook />
-                      <C.H3>{setDate(courser.events[1].startTime, 'initialAccordion')}</C.H3>
-                      <C.H3>{`${setDate(courser.events[1].startTime, 'finalAccordion')} - ${setDate(courser.events[1].endTime, 'finalAccordion')}`}</C.H3>
+                      <C.RowText>
+                        <C.H3>{setDate(courser?.events[1]?.startTime, 'initialAccordion')}</C.H3>
+                        <C.H3>{`${setDate(courser?.events[1]?.startTime, 'finalAccordion')} - ${setDate(courser?.events[1]?.endTime, 'finalAccordion')}`}</C.H3>
+                      </C.RowText>
                     </C.RowAccordion>
 
-                    <C.DivAccordion>
-                      <C.TextAccordion>{courser.events[1].title}</C.TextAccordion>
-                      <C.SvgAccordion>
-                        <IconCalendar />
-                      </C.SvgAccordion>
-                      <C.TextAccordion>3h</C.TextAccordion>
-                    </C.DivAccordion>
-                    {/* end 3 */}
+                    <C.RowAccordion2>
+                      <C.TextAccordion1>
+                        {courser?.events[1]?.title}
+                      </C.TextAccordion1>
 
+                      <C.Svg>
+                        <img src={IconDegree} />
+                      </C.Svg>
+
+                      <C.TextAccordion2>
+                        3h
+                      </C.TextAccordion2>
+                    </C.RowAccordion2>
                   </C.InternalWrapper>
                 </>
                 )
