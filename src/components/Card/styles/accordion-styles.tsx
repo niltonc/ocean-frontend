@@ -33,7 +33,6 @@ export const TextWrapper = styled.p`
     text-align: start;
     width: 120px;
 `;
-
 export const RowWrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -49,30 +48,51 @@ export const RowAccordion = styled.div`
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 10px;
-
-    background-color: #1221;
+`;
+export const RowText = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
 `;
 export const ColWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:center;
 `;
-export const DivAccordion = styled(RowAccordion)`
+
+export const RowAccordion2 = styled.div`
     background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 0px;
+    width: 236px;
     height: 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 `;
-export const TextAccordion = styled.p`
+
+export const TextAccordion1 = styled.p`
     color: ${({ theme }) => theme.colors.black};
     font-size: ${({ theme }) => theme.fonts.h1};
     font-weight: 600;
-    text-align: start;
-`;
-export const SvgAccordion = styled.div`
     display: flex;
-    margin-left: 100px;
+    width: 150px;
+    margin-left:20px;
+`;
+
+export const TextAccordion2 = styled.p`
+    color: ${({ theme }) => theme.colors.black};
+    font-size: ${({ theme }) => theme.fonts.h1};
+    font-weight: 600;
+    display: flex;
+`;
+
+export const Svg = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
 `;

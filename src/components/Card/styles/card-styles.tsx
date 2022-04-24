@@ -31,24 +31,32 @@ export const Title = styled.p`
 `;
 export const Information = styled.div`
     position: absolute;
-    width: 250px;
+    width: 245px;
     height: 170px;
-    top: 145px;
-    left: 10px;
+    top: 130px;
+    left: 14px;
 `;
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 50px;
+    height: 60px;
+    margin-top: 2px;
+    border-bottom-width: thin;
+    border-bottom-style: inset;
+
 `;
-export const Col = styled.div`
+export const Col1 = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content:center;
-   width: 100px;
+    justify-content: start;
+    width: 110px;
 `;
+export const Col2 = styled(Col1)`
+    width: 60px;
+`;
+
 export const Box = styled.div`
     display: flex;
     flex-direction: column;
@@ -56,7 +64,6 @@ export const Box = styled.div`
 export const H3 = styled.p`
     color: ${({ theme }) => theme.colors.black};
     font-size: ${({ theme }) => theme.fonts.h3};
-    position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
 `;
@@ -77,7 +84,7 @@ export const DateTag = styled.div`
 export const TextTag = styled.p`
     font-size: ${({ theme }) => theme.fonts.h4};
     position: absolute;
-    left: 21px;
+    left: 42px;
     top: 8px;
 `;
 export const Button = styled.button`
