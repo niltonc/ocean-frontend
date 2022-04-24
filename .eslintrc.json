@@ -20,11 +20,13 @@
       "@typescript-eslint"
   ],
   "rules": {
+    "consistent-return": "off",
     "import/extensions": "off",
     "react/jsx-filename-extension": "off",
     "import/no-unresolved": "off",
     "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "no-sequences": "off"
   }
 }
