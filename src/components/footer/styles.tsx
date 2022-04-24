@@ -26,6 +26,6 @@ export const Container = styled.div`
     margin: 0 auto;
 `;
 export const Copyright = styled(Container)`
-    color: #A3A3A3;
+    color: ${({ theme }) => theme.colors.grey};;
     margin-top: 18px;
 `;
