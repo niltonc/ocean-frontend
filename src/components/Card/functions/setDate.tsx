@@ -22,10 +22,10 @@ const setDate = (ISO: Date, Type: String) => {
   const min = isoConverted.getMinutes();
 
   if (Type === 'initialCard') {
-    return `0${date}/0${month} ás ${hour}:${min}`;
+    return `0${date}/0${month} às ${hour}:${min}`;
   }
   if (Type === 'finalCard') {
-    return `${date}/${month}`;
+    return `${date}/0${month}`;
   }
   if (Type === 'initialAccordion') {
     return `${date} DE ${monthName}`;
