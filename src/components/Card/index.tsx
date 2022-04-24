@@ -12,6 +12,18 @@ import IconArrowDown from '../../assets/arrowdown';
 import IconDegree from '../../assets/degree.png';
 import setDate from './functions/setDate';
 
+interface ICourses {
+  track?: string ;
+  title?: string;
+  startTime?: string ;
+  endDate?: string;
+  events?: string [];
+  campus?: string;
+  speakers?: string [];
+  enrollmentsStart?: string;
+  detailsURL?: Date;
+}
+
 function Card() {
   const urlAPI = 'https://gist.githubusercontent.com/creathusjobs/3c53322e8dc8c3b524cfb2623c097cc5/raw/adc988f34c4fb1a0fe12035b4b030259776115ea/response.json';
   const [coursersDB, setCoursersDB] = useState([]);
@@ -34,7 +46,7 @@ function Card() {
     <div>
       <C.Box>
         <C.CardContainer>
-          {coursersDB?.slice(0, showMore === false ? 4 : coursersDB.length)?.map((courser) => (
+          {coursersDB?.slice(0, showMore === false ? 4 : coursersDB.length)?.map((courser:ICourses) => (
             <C.AccordionWrapper>
               <C.Container key={courser?.track}>
                 <C.Color>
