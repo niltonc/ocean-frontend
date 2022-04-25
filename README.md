@@ -17,6 +17,25 @@ OCEAN FRONTEND FINAL |
   - [x] Configuração do projeto – dotfiles.
   - [x] Commits Semântico.
 
+## Instalação da Aplicação
+
+>_Para instalar Ocean-Frontend:_
+
+```
+npm install oru yarn install
+```
+
+>_Para rodar a aplicação_
+
+```
+npm run dev ou yarn run dev
+```
+
+>_Para rodar o test e2e_
+
+```
+yarn test:e2e
+```
 ## Aquitetura da Aplicação
 
 > O código se encontra componetizado e atendendo ao máximo uma estrutura de projeto completa, mesmo que as features ainda não tenham sido implementadas foram criadas as pastas estruturais do projeto.
