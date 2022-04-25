@@ -12,6 +12,8 @@ import IconArrowDown from '../../assets/arrowdown';
 import IconDegree from '../../assets/degree.png';
 import setDate from './functions/setDate';
 
+export const urlAPI = 'https://gist.githubusercontent.com/creathusjobs/3c53322e8dc8c3b524cfb2623c097cc5/raw/adc988f34c4fb1a0fe12035b4b030259776115ea/response.json';
+
 interface ICourses {
   track?: string ;
   title?: string;
@@ -24,7 +26,7 @@ interface ICourses {
   detailsURL?: Date;
 }
 
-function Card() {
+export default function Card() {
   const urlAPI = 'https://gist.githubusercontent.com/creathusjobs/3c53322e8dc8c3b524cfb2623c097cc5/raw/adc988f34c4fb1a0fe12035b4b030259776115ea/response.json';
   const [coursersDB, setCoursersDB] = useState([]);
 
@@ -130,7 +132,7 @@ function Card() {
                         Sobre as aulas
                       </C.TextWrapper>
                     </C.ColWrapper>
-                    <C.ButtonWrapper onClick={handleClick}>
+                    <C.ButtonWrapper id='accordion' onClick={handleClick}>
                       {open ? (
                         <IconArrowUp />
                       ) : (
@@ -221,7 +223,7 @@ function Card() {
         </C.CardContainer>
       </C.Box>
       <C.Box>
-        <C.ShowGrid onClick={handleShowMore}>
+        <C.ShowGrid id='ShowGrid' onClick={handleShowMore}>
           <C.ShowGridText>
             Ver tudo
           </C.ShowGridText>
@@ -231,4 +233,3 @@ function Card() {
   );
 }
 
-export default Card;
